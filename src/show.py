@@ -1,6 +1,6 @@
 import calendar
 import time
-
+import os
 from pip._vendor.distlib.compat import raw_input
 
 from src import test
@@ -31,3 +31,9 @@ file_fo = open("test.txt", "a")
 file_fo.write("123456789123456789\n")
 file_fo.flush()
 file_fo.close()
+
+file_r = open("test.txt","r+")
+print("文件内容：\n", file_r.read())
+file_r.close()
+
+print(os.getcwd())
