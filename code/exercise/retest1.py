@@ -15,10 +15,9 @@ def str_reverse():
 
 
 def for_birthday():
-    data = '510722199511011455'
-    model = r'([1-2][0|9]{2}[0-9][0-9]{4})'
+    data = '510722210011011455'
+    model = r'([0-9]{6})([12][0-9]{3}[01][0-9][0-3][0-9])'
     result_2 = re.search(model, data)
-    print(type(result_2))
-    print(result_2)
+    print(result_2.group()[6:])
 
 for_birthday()
