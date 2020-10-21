@@ -1,3 +1,5 @@
+import sys
+
 class TVShow:
     def __init__(self, show):
         self.__show = show
@@ -5,6 +7,7 @@ class TVShow:
     @property
     def show(self):
         return self.__show
+
 
 class Fruit:
     color = None
