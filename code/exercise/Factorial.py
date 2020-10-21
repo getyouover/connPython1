@@ -1,6 +1,16 @@
 # 阶乘
 class Factorial:
+
     def result(self, a):
+        total = 1
+        if a == 0 : return total
+        for i in range(1,a + 1):
+            total = total * i
+
+        return total
+
+    def result_test(self):
+        a=12
         total = 1
         if a == 0 : return total
         for i in range(1,a + 1):
