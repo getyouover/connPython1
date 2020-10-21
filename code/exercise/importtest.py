@@ -1,3 +1,5 @@
-import Factorial, importOraginal as f
+import Factorial, importOraginal
 
-print(f.test.show())
+importOraginal.test().show()
+print(importOraginal.test().show())
+print(Factorial.Factorial().result(12))
