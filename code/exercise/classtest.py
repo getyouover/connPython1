@@ -1,3 +1,4 @@
+import sys
 
 class TVShow:
     def __init__(self, show):
@@ -32,3 +33,4 @@ if __name__ == "__main__":
     print("播放中：" + str(TVShow.show))
     apple = Apple()
     apple.hverst()
+    print(sys.path)
