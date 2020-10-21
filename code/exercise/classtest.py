@@ -1,4 +1,3 @@
-import sys
 
 class TVShow:
     def __init__(self, show):
