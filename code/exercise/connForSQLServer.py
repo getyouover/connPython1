@@ -1,4 +1,5 @@
 import pymssql
+import sqlite3
 
 
 class MSSQL:
@@ -35,8 +36,10 @@ class MSSQL:
     def ExecNoQuery(self, sql):
         cur = self.__GetConnnect()
         cur.execute(sql)
-        self.conn.commiy()
+        self.conn.commit()
         self.conn.close()
+        print("数据提交成功~~")
+
 
 def main():
         m = MSSQL(host="127.0.0.1", username="robin", passwrd="test123123", dbname="pythontest")
@@ -44,5 +47,11 @@ def main():
         print(result_1)
 
 
+def others():
+    cur=MSSQL(host="127.0.0.1",username="robin", passwrd="test123123", dbname="pythontest")
+    cur.ExecNoQuery("insert into students (number,S_name,S_age) values ('10006','Miss Tu','24')")
+
+
 if __name__ == "__main__":
     main()
+    #others()
